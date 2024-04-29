@@ -1,0 +1,64 @@
+spring:
+  profiles:
+    default: local
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/kiosk?characterEncoding=uTF-8&serverTimezone=Asia/Seoul
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 1234
+
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    defer-datasource-initialization: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          description:
+            sql:
+              BasicBinder: trace
+        SQL: debug
+        orm:
+          jdbc:
+            bind: trace
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem/~/kiosk
+    username: sa
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
