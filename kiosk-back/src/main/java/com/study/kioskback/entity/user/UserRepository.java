@@ -1,0 +1,10 @@
+package com.study.kioskback.entity.user;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface UserRepository extends JpaRepository<User, Integer> {
+    // find by userPhoneNumber
+    Optional<User> findByUserPhoneNumber(String userPhoneNumber);
+}
