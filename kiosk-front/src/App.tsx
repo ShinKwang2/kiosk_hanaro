@@ -1,4 +1,5 @@
 import Menu from './components/Menu';
+import { SelectedMenuProvider } from './contexts/selectedMenu-context';
 
 function App() {
   return (
@@ -7,7 +8,9 @@ function App() {
       {/* <div className='bg-purple-500 p-3 h-3/5 flex'> */}
       {/* <div className='´bg-green-400 w-1/4'>메뉴리스트</div> */}
       {/* <MenuTabList /> */}
-      <Menu />
+      <SelectedMenuProvider>
+        <Menu />
+      </SelectedMenuProvider>
       {/* <div className='bg-gray-300 w-3/4'>메뉴 디테일</div> */}
       {/* </div> */}
       <div className='bg-yellow-400 h-1/5'>장바구니</div>
