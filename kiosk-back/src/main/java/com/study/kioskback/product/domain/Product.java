@@ -52,7 +52,7 @@ public class Product {
     @Column(name = "product_updated_date")
     private LocalDateTime updatedAt;
 
-    @OneToMany(mappedBy = "product")
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ProductOption> options = new ArrayList<>();
 
     @Builder
