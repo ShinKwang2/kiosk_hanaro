@@ -1,12 +1,12 @@
-package com.study.kioskback.dto;
+package com.study.kioskback.user.dto;
 
-import com.study.kioskback.entity.user.User;
+import com.study.kioskback.user.domain.User;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
-import static com.study.kioskback.entity.user.UserPointConst.DEFAULT_POINT;
+import static com.study.kioskback.user.domain.UserPointConst.DEFAULT_POINT;
 
 @Data
 @NoArgsConstructor

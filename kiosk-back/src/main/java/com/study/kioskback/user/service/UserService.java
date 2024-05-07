@@ -1,8 +1,8 @@
-package com.study.kioskback.service;
+package com.study.kioskback.user.service;
 
-import com.study.kioskback.dto.UserSaveDto;
-import com.study.kioskback.entity.user.User;
-import com.study.kioskback.entity.user.UserRepository;
+import com.study.kioskback.user.dto.UserSaveDto;
+import com.study.kioskback.user.domain.User;
+import com.study.kioskback.user.domain.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
