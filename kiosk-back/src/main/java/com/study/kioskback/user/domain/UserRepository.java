@@ -1,4 +1,4 @@
-package com.study.kioskback.entity.user;
+package com.study.kioskback.user.domain;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

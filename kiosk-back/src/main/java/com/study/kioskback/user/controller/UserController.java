@@ -1,7 +1,7 @@
-package com.study.kioskback.controller;
+package com.study.kioskback.user.controller;
 
-import com.study.kioskback.dto.UserSaveDto;
-import com.study.kioskback.service.UserService;
+import com.study.kioskback.user.dto.UserSaveDto;
+import com.study.kioskback.user.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;

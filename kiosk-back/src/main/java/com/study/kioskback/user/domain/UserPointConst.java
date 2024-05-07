@@ -1,4 +1,4 @@
-package com.study.kioskback.entity.user;
+package com.study.kioskback.user.domain;
 
 public interface UserPointConst {
     // userPoint
