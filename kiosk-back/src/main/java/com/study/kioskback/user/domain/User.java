@@ -1,4 +1,4 @@
-package com.study.kioskback.entity.user;
+package com.study.kioskback.user.domain;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
