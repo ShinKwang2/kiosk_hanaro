@@ -1,9 +1,10 @@
 package com.study.kioskback.api.order.controller;
 
+import com.study.kioskback.api.ApiResponse;
 import com.study.kioskback.api.order.controller.request.OrderCreateRequest;
 import com.study.kioskback.api.order.service.OrderService;
+import com.study.kioskback.api.order.service.response.OrderResponse;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,9 +21,8 @@ public class OrderController {
     private final OrderService orderService;
 
     @PostMapping
-    public ResponseEntity createOrder(@Validated @RequestBody OrderCreateRequest request) {
+    public ApiResponse<OrderResponse> createOrder(@Validated @RequestBody OrderCreateRequest request) {
         LocalDateTime registeredDateTime = LocalDateTime.now();
-        orderService.createOrder(request.getPhoneNumber(), request.toServiceRequest(), registeredDateTime);
-        return null;
+        return ApiResponse.ok(orderService.createOrder(request.getPhoneNumber(), request.toServiceRequest(), registeredDateTime));
     }
 }
