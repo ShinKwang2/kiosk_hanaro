@@ -36,5 +36,4 @@ public class ProductController {
         Integer savedId = productService.saveProduct(requestDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(savedId);
     }
-
 }
