@@ -1,7 +1,6 @@
-package com.study.kioskback.order.service;
+package com.study.kioskback.api.order.service;
 
 import com.study.kioskback.api.order.controller.request.OrderCreateRequest;
-import com.study.kioskback.api.order.service.OrderService;
 import com.study.kioskback.api.order.service.request.OrderCreateServiceRequest;
 import com.study.kioskback.api.order.service.response.OrderResponse;
 import com.study.kioskback.api.product.domain.Product;
@@ -17,6 +16,8 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 @ActiveProfiles("test")
 @Transactional
@@ -48,14 +49,16 @@ class OrderServiceTest {
                 .productRequests(requests)
                 .build();
         //when
-        OrderResponse orderResponse = orderService.createOrder("01011111111", serviceRequest, LocalDateTime.now());
+        LocalDateTime now = LocalDateTime.now();
+        OrderResponse orderResponse = orderService.createOrder("01011111111", serviceRequest, now);
 
         //then
-        System.out.println(orderResponse);
-
+        assertThat(orderResponse.getId()).isEqualTo(1);
+        assertThat(orderResponse.getRegisteredDateTime()).isEqualTo(now);
+        assertThat(orderResponse.getProducts()).hasSize(6)
+                .extracting("id")
+                .isEqualTo(List.of(5, 6, 7, 8, 9, 10));
     }
-
-
 
     private Product createProduct(String koreanName, String englishName, int price) {
         return Product.builder()
