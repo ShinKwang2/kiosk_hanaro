@@ -45,7 +45,7 @@ public class OrderService {
                 .collect(Collectors.toList());
         List<ProductWithQuantity> productWithQuantities = getProductWithQuantity(productIds, orderProducts);
 
-        Order savedOrder = orderRepository.save(Order.createOrder(productWithQuantities, registeredDateTime));
+        Order savedOrder = orderRepository.save(Order.createOrder(productWithQuantities, registeredDateTime, user));
         return OrderResponse.of(savedOrder);
     }
 
@@ -75,7 +75,7 @@ public class OrderService {
         return User.builder()
                 .userPhoneNumber(phoneNumber)
                 .userPoint(UserConst.DEFAULT_POINT)
-                .userJoinDate(registeredDateTime.toLocalDate())
+                .userJoinDate(registeredDateTime)
                 .build();
     }
 }

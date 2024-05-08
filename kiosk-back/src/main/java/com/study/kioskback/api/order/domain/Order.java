@@ -1,6 +1,7 @@
 package com.study.kioskback.api.order.domain;
 
 import com.study.kioskback.api.order.service.request.ProductWithQuantity;
+import com.study.kioskback.api.user.domain.User;
 import com.study.kioskback.error.exception.order.AlreadyAccepted;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
@@ -23,6 +24,10 @@ public class Order {
     @Id
     private Integer id;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
+
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OrderProduct> orderProducts = new ArrayList<>();
 
@@ -43,7 +48,7 @@ public class Order {
         this.updatedAt = updatedAt;
     }
 
-    public static Order createOrder(List<ProductWithQuantity> productWithQuantities, LocalDateTime registeredDateTime) {
+    public static Order createOrder(List<ProductWithQuantity> productWithQuantities, LocalDateTime registeredDateTime, User user) {
         Order order = Order.builder()
                 .orderStatus(OrderStatus.INIT)
                 .createdAt(registeredDateTime)
@@ -52,16 +57,18 @@ public class Order {
         productWithQuantities.stream()
                 .map(OrderProduct::createOrderProduct)
                 .forEach(orderProduct -> orderProduct.addOrder(order));
+        order.changeUser(user);
         return order;
     }
 
     //==연관관계 편의 메서드==//
-//    public void addOrderItem(OrderProduct... orderProducts) {
-//        Arrays.stream(orderProducts)
-//                .forEach(orderProduct -> this.orderProducts.add(orderProduct));
-//        Arrays.stream(orderProducts)
-//                .forEach(orderProduct -> orderProduct.addOrder(this));
-//    }
+    public void changeUser(User user) {
+        if (user != null) {
+            this.user = user;
+            user.addOrder(this);
+        }
+    }
+
 
     //==비즈니스 로직==//
     public void cancel() {
