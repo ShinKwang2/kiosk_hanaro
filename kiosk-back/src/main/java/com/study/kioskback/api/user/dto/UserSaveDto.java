@@ -5,7 +5,7 @@ import com.study.kioskback.api.user.domain.UserConst;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
@@ -16,8 +16,7 @@ public class UserSaveDto {
         return User.builder()
                 .userPhoneNumber(this.userPhoneNumber)
                 .userPoint(UserConst.DEFAULT_POINT)
-                .userJoinDate(LocalDate.now())
+                .userJoinDate(LocalDateTime.now())
                 .build();
     }
-
 }
