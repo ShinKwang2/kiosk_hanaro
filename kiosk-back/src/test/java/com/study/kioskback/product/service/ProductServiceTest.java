@@ -24,6 +24,7 @@ import java.util.UUID;
 import static org.assertj.core.api.Assertions.*;
 
 @ActiveProfiles("test")
+@Transactional
 @SpringBootTest
 class ProductServiceTest {
 
@@ -63,7 +64,6 @@ class ProductServiceTest {
                 );
     }
 
-    @Transactional
     @DisplayName("제품 저장")
     @Test
     void saveProduct() throws Exception {
