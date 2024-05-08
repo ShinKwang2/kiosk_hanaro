@@ -23,6 +23,13 @@ public class ProductRepositoryImpl implements ProductRepositoryCustom {
                 .fetch();
     }
 
+    @Override
+    public List<Product> findAllByIdIn(List<Integer> productIds) {
+        return jpaQueryFactory.selectFrom(product)
+                .where(product.id.in(productIds))
+                .fetch();
+    }
+
     private BooleanExpression typeEq(ProductType productType) {
         return productType != null ? product.type.eq(productType) : null;
     }

@@ -8,4 +8,6 @@ import java.util.List;
 public interface ProductRepositoryCustom {
 
     List<Product> findAllBy(ProductSearch productSearch);
+
+    List<Product> findAllByIdIn(List<Integer> productIds);
 }
