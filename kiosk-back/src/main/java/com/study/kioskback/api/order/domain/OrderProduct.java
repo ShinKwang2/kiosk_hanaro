@@ -14,9 +14,9 @@ import lombok.NoArgsConstructor;
 @Entity
 public class OrderProduct {
 
-    @Column(name = "order_product_id")
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
+    @Id @Column(name = "order_product_id")
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)

@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 public class ProductOption {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
+    @Id @Column(name = "product_option_id")
     private Integer id;
 
     @Enumerated(EnumType.STRING)
