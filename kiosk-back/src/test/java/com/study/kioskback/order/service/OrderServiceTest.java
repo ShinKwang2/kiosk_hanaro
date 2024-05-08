@@ -1,11 +1,11 @@
 package com.study.kioskback.order.service;
 
-import com.study.kioskback.order.controller.request.OrderCreateRequest;
-import com.study.kioskback.order.service.request.OrderCreateServiceRequest;
-import com.study.kioskback.order.service.response.OrderResponse;
-import com.study.kioskback.product.domain.Product;
-import com.study.kioskback.product.dto.ProductRequestDto;
-import com.study.kioskback.product.repository.ProductRepository;
+import com.study.kioskback.api.order.controller.request.OrderCreateRequest;
+import com.study.kioskback.api.order.service.OrderService;
+import com.study.kioskback.api.order.service.request.OrderCreateServiceRequest;
+import com.study.kioskback.api.order.service.response.OrderResponse;
+import com.study.kioskback.api.product.domain.Product;
+import com.study.kioskback.api.product.repository.ProductRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
