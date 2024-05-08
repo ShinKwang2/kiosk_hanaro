@@ -1,11 +1,18 @@
-import { useState } from 'react';
-
-function AdminMenu({ value, onClick }: { value: string; onClick: () => void }) {
-  const [isSelected, setIsSelected] = useState<boolean>(false);
+function AdminMenu({
+  value,
+  index,
+  selectedMenu,
+  setSelectedMenu,
+}: {
+  value: string;
+  index: number;
+  selectedMenu: number;
+  setSelectedMenu: (index: number) => void;
+}) {
+  const isSelected = index === selectedMenu;
 
   function handleClick() {
-    setIsSelected((prev) => !prev);
-    onClick();
+    setSelectedMenu(index);
   }
 
   return (
