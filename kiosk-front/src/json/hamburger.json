@@ -17,7 +17,8 @@
     "mo_list_kor_alt": "신제품",
     "mo_list_image_url": "/upload/product/molist/1712034739482.png",
     "calorie": "802",
-    "regdate": "2023-05-03"
+    "regdate": "2023-05-03",
+    "price": "7600"
   },
   {
     "kor_name": "빅맥<sub class=reg>®</sub> BLT",
@@ -38,7 +39,8 @@
     "mo_list_kor_alt": "신제품",
     "mo_list_image_url": "/upload/product/molist/1712034592869.png",
     "calorie": "628",
-    "regdate": "2023-05-03"
+    "regdate": "2023-05-03",
+    "price": "7400"
   },
   {
     "kor_name": "더블 쿼터파운더<sub>®</sub> 치즈",
@@ -59,7 +61,8 @@
     "mo_list_kor_alt": "더블 쿼터파운더 치즈",
     "mo_list_image_url": "/upload/product/molist/1583727508397.png",
     "calorie": "770",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "8200"
   },
   {
     "kor_name": "쿼터파운더<sub class=reg>®</sub> 치즈",
@@ -80,7 +83,8 @@
     "mo_list_kor_alt": "쿼터파운더 치즈",
     "mo_list_image_url": "/upload/product/molist/1583728208409.png",
     "calorie": "536",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "6300"
   },
   {
     "kor_name": "빅맥<sub class=reg>®</sub>",
@@ -101,7 +105,8 @@
     "mo_list_kor_alt": "빅맥",
     "mo_list_image_url": "/upload/product/molist/1583727862456.png",
     "calorie": "582",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "6300"
   },
   {
     "kor_name": "맥크리스피<sub class=reg>™</sub> 디럭스 버거",
@@ -122,7 +127,8 @@
     "mo_list_kor_alt": "신제품",
     "mo_list_image_url": "/upload/product/molist/1653436806801.png",
     "calorie": "600",
-    "regdate": "2022-05-25"
+    "regdate": "2022-05-25",
+    "price": "7600"
   },
   {
     "kor_name": "맥크리스피<sub class=reg>™</sub> 클래식 버거",
@@ -143,7 +149,8 @@
     "mo_list_kor_alt": "신제품",
     "mo_list_image_url": "/upload/product/molist/1653436602854.png",
     "calorie": "588",
-    "regdate": "2022-05-25"
+    "regdate": "2022-05-25",
+    "price": "6700"
   },
   {
     "kor_name": "맥스파이시<sub class=reg>®</sub> 상하이 버거",
@@ -164,7 +171,8 @@
     "mo_list_kor_alt": "맥스파이시 상하이 버거",
     "mo_list_image_url": "/upload/product/molist/1583728361120.png",
     "calorie": "501",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "6300"
   },
   {
     "kor_name": "1955<sub>®</sub> 버거",
@@ -185,7 +193,8 @@
     "mo_list_kor_alt": "1955 버거",
     "mo_list_image_url": "/upload/product/molist/1599182697524.png",
     "calorie": "572",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "7200"
   },
   {
     "kor_name": "맥치킨<sub class=reg>®</sub> 모짜렐라",
@@ -206,7 +215,8 @@
     "mo_list_kor_alt": "맥치킨® 모짜렐라",
     "mo_list_image_url": "/upload/product/molist/1583727656443.png",
     "calorie": "743",
-    "regdate": "2019-10-08"
+    "regdate": "2019-10-08",
+    "price": "5000"
   },
   {
     "kor_name": "맥치킨<sub class=reg>®</sub>",
@@ -227,7 +237,8 @@
     "mo_list_kor_alt": "맥치킨",
     "mo_list_image_url": "/upload/product/molist/1583730340236.png",
     "calorie": "523",
-    "regdate": "2019-10-08"
+    "regdate": "2019-10-08",
+    "price": "4300"
   },
   {
     "kor_name": "더블 불고기 버거",
@@ -248,7 +259,8 @@
     "pc_list_kor_alt": "더블 불고기 버거",
     "pc_eng_alt": "Doubble Bulgogi Burger product photo",
     "calorie": "635",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "5400"
   },
   {
     "kor_name": "에그 불고기 버거",
@@ -269,7 +281,8 @@
     "mo_list_kor_alt": "1+등급 계란",
     "mo_list_image_url": "/upload/product/molist/1644572715598.png",
     "calorie": "491",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "5100"
   },
   {
     "kor_name": "불고기 버거",
@@ -290,7 +303,8 @@
     "mo_list_kor_alt": "불고기 버거",
     "mo_list_image_url": "/upload/product/molist/1583727812006.png",
     "calorie": "409",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "4200"
   },
   {
     "kor_name": "슈슈 버거",
@@ -311,7 +325,8 @@
     "mo_list_kor_alt": "슈슈 버거",
     "mo_list_image_url": "/upload/product/molist/1583728012116.png",
     "calorie": "409",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "5500"
   },
   {
     "kor_name": "슈비 버거",
@@ -332,7 +347,8 @@
     "mo_list_kor_alt": "슈비 버거",
     "mo_list_image_url": "/upload/product/molist/1583727926627.png",
     "calorie": "540",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "6600"
   },
   {
     "kor_name": "베이컨 토마토 디럭스",
@@ -353,7 +369,8 @@
     "mo_list_image_url": "/upload/product/molist/1583727713838.png",
     "kor_content": "두 장의 100% 순 쇠고기 패티에 그릴에 구워 <br/>더욱 고소한 1장의 베이컨을 얹고,<br/> 신선한 토마토와 양상추,<br/>매콤달콤한 스위트 칠리 소스, 치즈, 마요네즈를 더해<br/>더욱 풍부하고 신선한 맛의 프리미엄 버거.<br>\r\n<br>\r\n*판매 시간: 10:30AM~4AM",
     "calorie": "570",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "6600"
   },
   {
     "kor_name": "치즈버거",
@@ -374,7 +391,8 @@
     "pc_list_kor_alt": "치즈버거",
     "pc_eng_alt": "Cheeseburger product photo",
     "calorie": "318",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "3600"
   },
   {
     "kor_name": "더블 치즈버거",
@@ -395,7 +413,8 @@
     "mo_list_kor_alt": "더블 치즈버거",
     "mo_list_image_url": "/upload/product/molist/1583727427041.png",
     "calorie": "479",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "5600"
   },
   {
     "kor_name": "트리플 치즈버거",
@@ -416,7 +435,8 @@
     "pc_list_eng_alt": "Triple Cheeseburger",
     "pc_list_kor_alt": "트리플 치즈버거",
     "calorie": "620",
-    "regdate": "2020-06-10"
+    "regdate": "2020-06-10",
+    "price": "6700"
   },
   {
     "kor_name": "햄버거",
@@ -437,6 +457,7 @@
     "mo_list_kor_alt": "햄버거",
     "mo_list_image_url": "/upload/product/molist/1583728288439.png",
     "calorie": "266",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "3400"
   }
 ]
