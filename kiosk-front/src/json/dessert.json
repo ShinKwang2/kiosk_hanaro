@@ -281,7 +281,8 @@
     "mo_list_kor_alt": "초코 오레오 맥플러리",
     "mo_list_image_url": "/upload/product/molist/1615378457112.png",
     "calorie": "388",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "3300"
   },
   {
     "kor_name": "스트로베리콘",
@@ -346,7 +347,8 @@
     "mo_list_kor_alt": "바닐라 선데이 아이스크림",
     "mo_list_image_url": "/upload/product/molist/1657246850961.png",
     "calorie": "201",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "1600"
   },
   {
     "kor_name": "초코 선데이 아이스크림",
@@ -367,7 +369,8 @@
     "mo_list_kor_alt": "초코 선데이 아이스크림",
     "mo_list_image_url": "/upload/product/molist/1563268811815.jpg",
     "calorie": "323",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "1600"
   },
   {
     "kor_name": "딸기 선데이 아이스크림",
@@ -388,7 +391,8 @@
     "mo_list_kor_alt": "딸기 선데이 아이스크림",
     "mo_list_image_url": "/upload/product/molist/1563268831599.jpg",
     "calorie": "277",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "1600"
   },
   {
     "kor_name": "오레오 아포가토",
@@ -409,6 +413,7 @@
     "mo_list_kor_alt": "오레오 아포가토",
     "mo_list_image_url": "/upload/product/molist/1563268854496.jpg",
     "calorie": "234",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "3200"
   }
 ]
