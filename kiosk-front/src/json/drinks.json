@@ -18,7 +18,8 @@
     "mo_list_kor_alt": "자두 천도복숭아 칠러",
     "mo_list_image_url": "/upload/product/molist/1698851165347.png",
     "calorie": "",
-    "regdate": "2023-04-04"
+    "regdate": "2023-04-04",
+    "price": "3700"
   },
   {
     "kor_name": "제주 한라봉 칠러",
@@ -39,7 +40,8 @@
     "mo_list_kor_alt": "제주 한라봉 칠러",
     "mo_list_image_url": "/upload/product/molist/1681287334918.png",
     "calorie": "236",
-    "regdate": "2022-05-11"
+    "regdate": "2022-05-11",
+    "price": "3700"
   },
   {
     "kor_name": "바닐라 라떼",
@@ -60,7 +62,8 @@
     "mo_list_kor_alt": "바닐라 라떼",
     "mo_list_image_url": "/upload/product/molist/1677678823599.png",
     "calorie": "",
-    "regdate": "2021-11-02"
+    "regdate": "2021-11-02",
+    "price": "4500"
   },
   {
     "kor_name": "아이스 바닐라 라떼",
@@ -81,7 +84,8 @@
     "mo_list_kor_alt": "아이스 바닐라 라떼",
     "mo_list_image_url": "/upload/product/molist/1654652278623.png",
     "calorie": "",
-    "regdate": "2021-11-02"
+    "regdate": "2021-11-02",
+    "price": "4500"
   },
   {
     "kor_name": "카페라떼",
@@ -102,7 +106,8 @@
     "mo_list_kor_alt": "카페라떼",
     "mo_list_image_url": "/upload/product/molist/1677680136286.png",
     "calorie": "",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "4000"
   },
   {
     "kor_name": "디카페인 카페라떼",
@@ -123,7 +128,8 @@
     "mo_list_kor_alt": "디카페인 카페라떼",
     "mo_list_image_url": "/upload/product/molist/1677679241553.png",
     "calorie": "",
-    "regdate": "2019-12-27"
+    "regdate": "2019-12-27",
+    "price": "4200"
   },
   {
     "kor_name": "아이스 카페라떼",
@@ -144,7 +150,8 @@
     "mo_list_kor_alt": "아이스 카페라떼",
     "mo_list_image_url": "/upload/product/molist/1610885614583.png",
     "calorie": "",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "4000"
   },
   {
     "kor_name": "디카페인 아이스 카페라떼",
@@ -165,7 +172,8 @@
     "mo_list_kor_alt": "디카페인 아이스 카페라떼",
     "mo_list_image_url": "/upload/product/molist/1610887288965.png",
     "calorie": "",
-    "regdate": "2019-12-27"
+    "regdate": "2019-12-27",
+    "price": "4200"
   },
   {
     "kor_name": "아메리카노",
@@ -186,7 +194,8 @@
     "mo_list_kor_alt": "아메리카노",
     "mo_list_image_url": "/upload/product/molist/1677680301731.png",
     "calorie": "",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "3300"
   },
   {
     "kor_name": "디카페인 아메리카노",
@@ -207,7 +216,8 @@
     "mo_list_kor_alt": "디카페인 아메리카노",
     "mo_list_image_url": "/upload/product/molist/1677679747260.png",
     "calorie": "",
-    "regdate": "2019-12-27"
+    "regdate": "2019-12-27",
+    "price": "3500"
   },
   {
     "kor_name": "아이스 아메리카노",
@@ -228,7 +238,8 @@
     "mo_list_kor_alt": "아이스 아메리카노",
     "mo_list_image_url": "/upload/product/molist/1610887722279.png",
     "calorie": "",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "3300"
   },
   {
     "kor_name": "디카페인 아이스 아메리카노",
@@ -249,7 +260,8 @@
     "mo_list_kor_alt": "디카페인 아이스 아메리카노",
     "mo_list_image_url": "/upload/product/molist/1610889538288.png",
     "calorie": "",
-    "regdate": "2019-12-27"
+    "regdate": "2019-12-27",
+    "price": "3500"
   },
   {
     "kor_name": "카푸치노",
@@ -270,7 +282,8 @@
     "mo_list_kor_alt": "카푸치노",
     "mo_list_image_url": "/upload/product/molist/1677679973324.png",
     "calorie": "",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "4000"
   },
   {
     "kor_name": "디카페인 카푸치노",
@@ -291,7 +304,8 @@
     "mo_list_kor_alt": "디카페인 카푸치노",
     "mo_list_image_url": "/upload/product/molist/1677679498763.png",
     "calorie": "",
-    "regdate": "2019-12-27"
+    "regdate": "2019-12-27",
+    "price": "4200"
   },
   {
     "kor_name": "드립 커피",
@@ -312,7 +326,8 @@
     "mo_list_kor_alt": "드립 커피",
     "mo_list_image_url": "/upload/product/molist/1677680468491.png",
     "calorie": "",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "2700"
   },
   {
     "kor_name": "아이스 드립 커피",
@@ -333,7 +348,8 @@
     "mo_list_kor_alt": "아이스 드립 커피",
     "mo_list_image_url": "/upload/product/molist/1610889897116.png",
     "calorie": "",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "2700"
   },
   {
     "kor_name": "코카-콜라",
@@ -354,7 +370,8 @@
     "mo_list_kor_alt": "코카-콜라",
     "mo_list_image_url": "/upload/product/molist/1583889973675.png",
     "calorie": "",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "2600"
   },
   {
     "kor_name": "코카-콜라 제로",
@@ -375,7 +392,8 @@
     "mo_list_kor_alt": "코카-콜라 제로",
     "mo_list_image_url": "/upload/product/molist/1583890035054.png",
     "calorie": "",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "2600"
   },
   {
     "kor_name": "스프라이트",
@@ -396,7 +414,8 @@
     "mo_list_kor_alt": "스프라이트",
     "mo_list_image_url": "/upload/product/molist/1703512988848.png",
     "calorie": "",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "2600"
   },
   {
     "kor_name": "환타",
@@ -417,7 +436,8 @@
     "mo_list_kor_alt": "환타",
     "mo_list_image_url": "/upload/product/molist/1631160748947.png",
     "calorie": "",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "2600"
   },
   {
     "kor_name": "바닐라 쉐이크 Medium",
@@ -438,7 +458,8 @@
     "mo_list_kor_alt": "바닐라 쉐이크 Medium",
     "mo_list_image_url": "/upload/product/molist/1563269185564.jpg",
     "calorie": "366",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "3500"
   },
   {
     "kor_name": "딸기 쉐이크 Medium",
@@ -459,7 +480,8 @@
     "mo_list_kor_alt": "딸기 쉐이크 Medium",
     "mo_list_image_url": "/upload/product/molist/1563269168437.jpg",
     "calorie": "367",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "3500"
   },
   {
     "kor_name": "초코 쉐이크 Medium",
@@ -480,7 +502,8 @@
     "mo_list_kor_alt": "초코 쉐이크 Medium",
     "mo_list_image_url": "/upload/product/molist/1563269128910.jpg",
     "calorie": "375",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "3500"
   },
   {
     "kor_name": "오렌지 주스",
@@ -500,7 +523,8 @@
     "mo_eng_alt": "Orange Juice product photo",
     "mo_list_kor_alt": "오렌지 주스",
     "mo_list_image_url": "/upload/product/molist/1641520290538.png",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "1800"
   },
   {
     "kor_name": "생수",
@@ -521,6 +545,7 @@
     "mo_list_kor_alt": "생수",
     "mo_list_image_url": "/upload/product/molist/1563269614559.jpg",
     "calorie": "",
-    "regdate": "2019-05-30"
+    "regdate": "2019-05-30",
+    "price": "2000"
   }
 ]
