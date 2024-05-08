@@ -43,7 +43,7 @@ public class ProductService {
         Product product = requestDto.toEntity(productUploadFile);
         log.info("product.getUploadFile={}", product.getProductUploadFile().getUploadFileName());
 
-        List<ProductOption> options = addOptions(product);
+        List<ProductOption> options = createOptions(product);
         product.addOptions(options);
 
         Product savedProduct = productRepository.save(product);
@@ -51,7 +51,7 @@ public class ProductService {
         return savedProduct.getId();
     }
 
-    private List<ProductOption> addOptions(Product savedProduct) {
+    private List<ProductOption> createOptions(Product savedProduct) {
         List<ProductOption> options = new ArrayList<>();
         if (savedProduct.getType().equals(ProductType.HAMBURGER)) {
             options.add(new ProductOption(ProductOptionType.SINGLE, 0));

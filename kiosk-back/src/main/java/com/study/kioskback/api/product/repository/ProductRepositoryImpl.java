@@ -9,7 +9,7 @@ import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
-import static com.study.kioskback.product.domain.QProduct.product;
+import static com.study.kioskback.api.product.domain.QProduct.product;
 
 @RequiredArgsConstructor
 public class ProductRepositoryImpl implements ProductRepositoryCustom {

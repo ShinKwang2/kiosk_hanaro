@@ -1,4 +1,4 @@
-package com.study.kioskback.product.service;
+package com.study.kioskback.api.product.service;
 
 import com.study.kioskback.api.product.domain.Product;
 import com.study.kioskback.api.product.domain.ProductStatus;
@@ -8,7 +8,6 @@ import com.study.kioskback.api.product.dto.ProductPreviewDto;
 import com.study.kioskback.api.product.dto.ProductRequestDto;
 import com.study.kioskback.api.product.dto.ProductSearch;
 import com.study.kioskback.api.product.repository.ProductRepository;
-import com.study.kioskback.api.product.service.ProductService;
 import com.study.kioskback.util.FileStore;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -22,7 +21,8 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.UUID;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.tuple;
 
 @ActiveProfiles("test")
 @Transactional
@@ -40,7 +40,7 @@ class ProductServiceTest {
     private final String ENGLISH_NAME = "Double Big Mac";
     private final Integer PRICE = 5000;
 
-    @DisplayName("제품 타입으로 조회")
+    @DisplayName("상품 타입으로 조회")
     @Test
     void findAllProductByCondition() throws Exception {
         //given
@@ -65,7 +65,7 @@ class ProductServiceTest {
                 );
     }
 
-    @DisplayName("제품 저장")
+    @DisplayName("신규 상품 등록")
     @Test
     void saveProduct() throws Exception {
         //given

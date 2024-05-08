@@ -77,9 +77,9 @@ public class Product {
     }
 
     //== 연관관계 편의메소드==//
-    public void addOptions(List<ProductOption> options) {
-        options.addAll(options);
-        for (ProductOption option : options) {
+    public void addOptions(List<ProductOption> productOptions) {
+        this.options.addAll(productOptions);
+        for (ProductOption option : productOptions) {
             option.addProduct(this);
         }
     }
