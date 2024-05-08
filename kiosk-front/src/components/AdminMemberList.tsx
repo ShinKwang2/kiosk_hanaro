@@ -9,6 +9,8 @@ function MemberList() {
       date: string;
     }[]
   >([]);
+  const [selectedMember, setSelectedMember] = useState<number | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const exampleData = [
@@ -35,9 +37,25 @@ function MemberList() {
   }, []);
 
   function handleDelete(id: number) {
-    const updatedMembers = members.filter((member) => member.id !== id);
-    setMembers(updatedMembers);
+    setSelectedMember(id);
+    setIsModalOpen(true);
   }
+
+  const handleConfirmDelete = () => {
+    if (selectedMember !== null) {
+      const updatedMembers = members.filter(
+        (member) => member.id !== selectedMember
+      );
+      setMembers(updatedMembers);
+      setIsModalOpen(false);
+      setSelectedMember(null);
+    }
+  };
+
+  const handleCancelDelete = () => {
+    setIsModalOpen(false);
+    setSelectedMember(null);
+  };
 
   const totalMember = members.length;
 
@@ -76,6 +94,27 @@ function MemberList() {
           ))}
         </tbody>
       </table>
+      {isModalOpen && (
+        <div className='fixed top-0 left-0 w-full h-full flex justify-center items-center bg-gray-500 bg-opacity-50'>
+          <div className='bg-white p-5 rounded-lg'>
+            <p>정말로 삭제하시겠습니까?</p>
+            <div className='flex justify-end mt-3'>
+              <button
+                className='bg-red-500 text-white px-3 py-1 mr-3 rounded'
+                onClick={handleConfirmDelete}
+              >
+                예
+              </button>
+              <button
+                className='bg-gray-500 text-white px-3 py-1 rounded'
+                onClick={handleCancelDelete}
+              >
+                아니오
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
