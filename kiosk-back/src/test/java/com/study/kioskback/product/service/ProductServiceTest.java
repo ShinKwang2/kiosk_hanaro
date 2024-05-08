@@ -1,13 +1,14 @@
 package com.study.kioskback.product.service;
 
-import com.study.kioskback.product.domain.Product;
-import com.study.kioskback.product.domain.ProductStatus;
-import com.study.kioskback.product.domain.ProductType;
-import com.study.kioskback.product.domain.ProductUploadFile;
-import com.study.kioskback.product.dto.ProductPreviewDto;
-import com.study.kioskback.product.dto.ProductRequestDto;
-import com.study.kioskback.product.dto.ProductSearch;
-import com.study.kioskback.product.repository.ProductRepository;
+import com.study.kioskback.api.product.domain.Product;
+import com.study.kioskback.api.product.domain.ProductStatus;
+import com.study.kioskback.api.product.domain.ProductType;
+import com.study.kioskback.api.product.domain.ProductUploadFile;
+import com.study.kioskback.api.product.dto.ProductPreviewDto;
+import com.study.kioskback.api.product.dto.ProductRequestDto;
+import com.study.kioskback.api.product.dto.ProductSearch;
+import com.study.kioskback.api.product.repository.ProductRepository;
+import com.study.kioskback.api.product.service.ProductService;
 import com.study.kioskback.util.FileStore;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
