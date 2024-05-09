@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import payImg from '../static/img/payImg.png';
+import payGif from '../static/gif/pay.gif';
 import { useEffect } from 'react';
 
 function Pay() {
@@ -26,7 +26,7 @@ function Pay() {
         <br />
         넣어주세요. 결제 오류 시,
         <span className='font-bold'> 카드를 긁어주세요.</span>
-        <img src={payImg} alt='payImg' />
+        <img className='w-50' src={payGif} alt='payGif' />
       </div>
     </div>
   );
