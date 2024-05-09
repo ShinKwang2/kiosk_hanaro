@@ -22,12 +22,12 @@ function KeyPad({
   return (
     <button
       className={clsx(
-        'border-2 border-gray-300 bg-white p-4 m-2 shadow-md rounded-md w-20 h-20 font-bold flex justify-center items-center',
+        'border-2 border-gray-300 p-4 m-2 shadow-md rounded-md w-20 h-20 font-bold flex justify-center items-center',
         value === 10
           ? 'bg-gray-300 text-2xl'
           : value === 12
-            ? 'bg-red-500 text-white text-xl'
-            : 'text-2xl text-gray-400 hover:text-white hover:bg-gray-300',
+            ? 'bg-red-600 text-white text-xl'
+            : 'text-2xl bg-white text-gray-400 hover:text-white hover:bg-gray-300',
         {
           [clsx('opacity-50 cursor-not-allowed')]:
             value === 12 && phoneNumber.length !== 11,
