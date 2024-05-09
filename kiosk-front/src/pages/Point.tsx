@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import KeyPad from '../components/KeyPad';
 import logo from '../static/img/logo.png';
-import ShowPoint from './ShowPoint';
+import { useNavigate } from 'react-router-dom';
 
 function Point() {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [showModal, setShowModal] = useState(false);
-  const [showPoint, setShowPoint] = useState(false);
-  const userPoint = 70;
+  const navigate = useNavigate();
 
   function handleModalClose() {
     setShowModal(false);
@@ -17,7 +16,7 @@ function Point() {
   }
   function handleShowPoint() {
     setShowModal(false);
-    setShowPoint(true);
+    navigate('/showPoint');
   }
 
   function keyPadClick(value: number) {
@@ -91,7 +90,6 @@ function Point() {
           </div>
         </div>
       )}
-      {showPoint && <ShowPoint point={userPoint} />}
     </div>
   );
 }

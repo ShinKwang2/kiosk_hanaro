@@ -1,8 +1,18 @@
+import { useNavigate } from 'react-router-dom';
 import payImg from '../static/img/payImg.png';
+import { useEffect } from 'react';
 
 function Pay() {
   const totalCount = 4;
   const totalPrice = 27700;
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate('/complete');
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, [navigate]);
 
   return (
     <div className='m-10 bg-green-900 p-20 w-50 flex flex-col items-center'>
