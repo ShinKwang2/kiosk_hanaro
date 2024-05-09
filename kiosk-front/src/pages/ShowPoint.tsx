@@ -1,4 +1,13 @@
-function ShowPoint({ point }: { point: number }) {
+import { useNavigate } from 'react-router-dom';
+
+function ShowPoint() {
+  const point = 30;
+  const navigate = useNavigate();
+
+  function handlePay() {
+    navigate('/pay');
+  }
+
   return (
     <div className='m-10 bg-green-900 p-20 w-50 flex justify-center'>
       <div className='bg-white rounded-2xl text-center px-32 py-14'>
@@ -6,7 +15,10 @@ function ShowPoint({ point }: { point: number }) {
           <span className='text-red-500'>{point}P </span>
           적립되었습니다!
         </p>
-        <button className='font-bold border-gray-200 border-2 hover:bg-green-700 hover:text-white mt-5 p-2 w-48 rounded-lg shadow-xl'>
+        <button
+          className='font-bold border-gray-200 border-2 hover:bg-green-700 hover:text-white mt-5 p-2 w-48 rounded-lg shadow-xl'
+          onClick={handlePay}
+        >
           확인
         </button>
       </div>

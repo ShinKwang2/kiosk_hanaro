@@ -1,8 +1,18 @@
-import payImg from '../static/img/payImg.png';
+import { useNavigate } from 'react-router-dom';
+import payGif from '../static/gif/pay.gif';
+import { useEffect } from 'react';
 
 function Pay() {
   const totalCount = 4;
   const totalPrice = 27700;
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate('/complete');
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, [navigate]);
 
   return (
     <div className='m-10 bg-green-900 p-20 w-50 flex flex-col items-center'>
@@ -16,7 +26,7 @@ function Pay() {
         <br />
         넣어주세요. 결제 오류 시,
         <span className='font-bold'> 카드를 긁어주세요.</span>
-        <img src={payImg} alt='payImg' />
+        <img className='w-50' src={payGif} alt='payGif' />
       </div>
     </div>
   );

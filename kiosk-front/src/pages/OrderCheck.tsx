@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import OrderList from '../components/OrderList';
 import Total from '../components/OrderTotal';
+import { useNavigate } from 'react-router-dom';
 
 function OrderCheck() {
   const [orderItems, setOrderItems] = useState([
@@ -8,6 +9,7 @@ function OrderCheck() {
     { productName: '감자 튀김', price: 2000, quantity: 1 },
     { productName: '맥 플러리', price: 1000, quantity: 1 },
   ]);
+  const navigate = useNavigate();
 
   function handleQuantityChange(idx: number, newQuantity: number) {
     const updatedOrderItems = [...orderItems];
@@ -32,6 +34,9 @@ function OrderCheck() {
     0
   );
 
+  function handlePay() {
+    navigate('/pay');
+  }
   return (
     <div className='m-10 bg-green-900 p-20 w-50'>
       <h1 className='font-bold text-lg text-center text-white mb-20'>
@@ -59,7 +64,10 @@ function OrderCheck() {
           <button className='py-2 px-8 rounded-lg bg-red-600 text-white mr-1'>
             추가주문
           </button>
-          <button className='py-2 px-8 rounded-lg bg-green-800 text-white ml-1'>
+          <button
+            className='py-2 px-8 rounded-lg bg-green-800 text-white ml-1'
+            onClick={handlePay}
+          >
             결제하기
           </button>
         </div>
