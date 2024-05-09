@@ -1,5 +1,8 @@
 package com.study.kioskback.api.product.domain;
 
+import lombok.Getter;
+
+@Getter
 public enum ProductOptionType {
 
     SINGLE("단품"),

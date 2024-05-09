@@ -1,6 +1,7 @@
 package com.study.kioskback.api.product.service;
 
 import com.study.kioskback.api.product.domain.*;
+import com.study.kioskback.api.product.dto.ProductDetailDto;
 import com.study.kioskback.api.product.dto.ProductRequestDto;
 import com.study.kioskback.api.product.dto.ProductSearch;
 import com.study.kioskback.api.product.repository.ProductOptionRepository;
@@ -75,16 +76,16 @@ public class ProductService {
         return productId;
     }
 
-    public ProductPreviewDto findById(Integer productId) {
+    public ProductDetailDto findById(Integer productId) {
         Product product = productRepository.findById(productId)
                 .orElseThrow(NotFoundProduct::new);
-        return ProductPreviewDto.of(product);
+        return ProductDetailDto.of(product);
     }
 
     //TODO
-    public List<ProductPreviewDto> findAllBy(ProductSearch productSearch) {
+    public List<ProductDetailDto> findAllBy(ProductSearch productSearch) {
         return productRepository.findAllBy(productSearch).stream()
-                .map(ProductPreviewDto::of)
+                .map(ProductDetailDto::of)
                 .collect(Collectors.toList());
     }
 }
