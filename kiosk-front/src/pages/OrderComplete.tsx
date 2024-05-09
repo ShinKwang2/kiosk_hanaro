@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import logo from '../static/img/logo2.png';
+import logo from '../static/gif/logo.gif';
 import { useEffect, useState } from 'react';
 
 function OrderComplete() {
@@ -40,7 +40,7 @@ function OrderComplete() {
       onClick={handleClick}
     >
       <div className='flex flex-col items-center'>
-        <img src={logo} alt='logo' />
+        <img className='w-56 h-56 shadow-xl' src={logo} alt='logo' />
         <p className='mt-10'>
           고객님의 주문번호는
           <span className='font-bold text-red-500'>{orderNumber}</span>

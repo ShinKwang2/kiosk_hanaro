@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Randing from './pages/Randing';
 import CheckTakeOut from './pages/CheckTakeout';
@@ -11,19 +11,17 @@ import ShowPoint from './pages/ShowPoint';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Randing />} />
-        <Route path='/checkTakeout' element={<CheckTakeOut />} />
-        <Route path='/main' element={<CheckTakeOut />} />
-        <Route path='/recmenu' element={<RecMenu />} />
-        <Route path='/point' element={<Point />} />
-        <Route path='/showPoint' element={<ShowPoint />} />
-        <Route path='/checkOrder' element={<OrderCheck />} />
-        <Route path='/pay' element={<Pay />} />
-        <Route path='/complete' element={<OrderComplete />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Randing />} />
+      <Route path='/checkTakeout' element={<CheckTakeOut />} />
+      <Route path='/main' element={<CheckTakeOut />} />
+      <Route path='/recmenu' element={<RecMenu />} />
+      <Route path='/point' element={<Point />} />
+      <Route path='/showPoint' element={<ShowPoint />} />
+      <Route path='/checkOrder' element={<OrderCheck />} />
+      <Route path='/pay' element={<Pay />} />
+      <Route path='/complete' element={<OrderComplete />} />
+    </Routes>
   );
 }
 
