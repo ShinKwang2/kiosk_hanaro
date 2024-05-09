@@ -1,4 +1,4 @@
-import { MenuTitle } from '../types/types';
+import { MenuTitle } from '../../types/types';
 import MenuTab from './MenuTab';
 
 type MenuTapListProps = {

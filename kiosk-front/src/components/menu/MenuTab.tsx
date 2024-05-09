@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import { MenuTitle } from '../types/types';
-import { useSelectedMenu } from '../contexts/selectedMenu-context';
+import { MenuTitle } from '../../types/types';
+import { useSelectedMenu } from '../../contexts/selectedMenu-context';
 import { memo } from 'react';
 
 type MenuTabProps = {
