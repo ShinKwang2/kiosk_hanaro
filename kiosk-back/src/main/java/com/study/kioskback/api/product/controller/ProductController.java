@@ -1,5 +1,7 @@
 package com.study.kioskback.api.product.controller;
 
+import com.study.kioskback.api.ApiResponse;
+import com.study.kioskback.api.product.dto.ProductDetailDto;
 import com.study.kioskback.api.product.dto.ProductPreviewDto;
 import com.study.kioskback.api.product.dto.ProductRequestDto;
 import com.study.kioskback.api.product.dto.ProductSearch;
@@ -20,15 +22,14 @@ public class ProductController {
     private final ProductService productService;
 
     @GetMapping("/{productId}")
-    public ResponseEntity<ProductPreviewDto> findById(@PathVariable Integer productId) {
-        ProductPreviewDto responseDto = productService.findById(productId);
-        return ResponseEntity.ok(responseDto);
+    public ApiResponse<ProductDetailDto> findById(@PathVariable Integer productId) {
+        return ApiResponse.ok(productService.findById(productId));
     }
 
     @GetMapping
-    public ResponseEntity<List<ProductPreviewDto>> findAllBy(ProductSearch productSearch) {
-        List<ProductPreviewDto> products = productService.findAllBy(productSearch);
-        return ResponseEntity.ok(products);
+    public ApiResponse<List<ProductDetailDto>> findAllBy(ProductSearch productSearch) {
+        List<ProductDetailDto> products = productService.findAllBy(productSearch);
+        return ApiResponse.ok(products);
     }
 
     @PostMapping

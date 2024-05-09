@@ -4,6 +4,7 @@ import com.study.kioskback.api.product.domain.Product;
 import com.study.kioskback.api.product.domain.ProductStatus;
 import com.study.kioskback.api.product.domain.ProductType;
 import com.study.kioskback.api.product.domain.ProductUploadFile;
+import com.study.kioskback.api.product.dto.ProductDetailDto;
 import com.study.kioskback.api.product.dto.ProductPreviewDto;
 import com.study.kioskback.api.product.dto.ProductRequestDto;
 import com.study.kioskback.api.product.dto.ProductSearch;
@@ -55,7 +56,7 @@ class ProductServiceTest {
         ProductSearch productSearch = ProductSearch.builder().page(1).size(10).type("hamburger").build();
 
         //when
-        List<ProductPreviewDto> hamburgers = productService.findAllBy(productSearch);
+        List<ProductDetailDto> hamburgers = productService.findAllBy(productSearch);
 
         //then
         assertThat(hamburgers).hasSize(1)

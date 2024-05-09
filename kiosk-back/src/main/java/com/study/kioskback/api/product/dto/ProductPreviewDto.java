@@ -8,6 +8,7 @@ import lombok.Data;
 @Data
 public class ProductPreviewDto {
 
+    private Integer id;
     private String koreanName;
     private String englishName;
     private String imageUrlForList;
@@ -15,6 +16,7 @@ public class ProductPreviewDto {
 
     public static ProductPreviewDto of(Product product) {
         return ProductPreviewDto.builder()
+                .id(product.getId())
                 .koreanName(product.getKoreanName())
                 .englishName(product.getEnglishName())
                 .imageUrlForList(product.getProductUploadFile().getImageUrlForList())
