@@ -84,6 +84,12 @@ public class ProductService {
 
     //TODO
     public List<ProductDetailDto> findAllBy(ProductSearch productSearch) {
+        if (productSearch.getType().equals("recommended")) {
+            return productRepository.findRecommend(productSearch).stream()
+                    .map(ProductDetailDto::of)
+                    .collect(Collectors.toList());
+        }
+
         return productRepository.findAllBy(productSearch).stream()
                 .map(ProductDetailDto::of)
                 .collect(Collectors.toList());

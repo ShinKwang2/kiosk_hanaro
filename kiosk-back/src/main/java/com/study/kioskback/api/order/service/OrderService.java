@@ -76,6 +76,7 @@ public class OrderService {
                 .userPhoneNumber(phoneNumber)
                 .userPoint(UserConst.DEFAULT_POINT)
                 .userJoinDate(registeredDateTime)
+                .isRemoved(false)
                 .build();
     }
 }

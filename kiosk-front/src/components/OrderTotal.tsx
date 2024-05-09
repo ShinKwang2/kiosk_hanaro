@@ -1,10 +1,7 @@
-interface OrderList {
-  productName: string;
-  price: number;
-}
+import { Product } from '../types/types';
 
 interface OrderTotalProps {
-  orderLists: OrderList[];
+  orderLists: Product[];
   totalQuantity: number;
   totalPrice: number;
 }

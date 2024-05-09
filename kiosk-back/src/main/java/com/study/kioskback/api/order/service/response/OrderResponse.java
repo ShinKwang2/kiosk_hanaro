@@ -18,13 +18,15 @@ public class OrderResponse {
     private int totalPrice;
     private LocalDateTime registeredDateTime;
     private List<ProductResponse> products;
+    private Integer point;
 
     @Builder
-    private OrderResponse(Integer id, int totalPrice, LocalDateTime registeredDateTime, List<ProductResponse> products) {
+    private OrderResponse(Integer id, int totalPrice, LocalDateTime registeredDateTime, List<ProductResponse> products, Integer point) {
         this.id = id;
         this.totalPrice = totalPrice;
         this.registeredDateTime = registeredDateTime;
         this.products = products;
+        this.point = point;
     }
     public static OrderResponse of(Order order) {
         return OrderResponse.builder()
@@ -34,6 +36,7 @@ public class OrderResponse {
                 .products(order.getOrderProducts().stream()
                         .map(ProductResponse::of)
                         .collect(Collectors.toList()))
+                .point(order.getOrderProducts().stream().mapToInt(p -> p.getOrderPrice() * p.getQuantity()).sum() / 100)
                 .build();
     }
 

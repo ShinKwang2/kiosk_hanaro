@@ -8,11 +8,14 @@ import OrderCheck from './pages/OrderCheck';
 import Pay from './pages/Pay';
 import OrderComplete from './pages/OrderComplete';
 import ShowPoint from './pages/ShowPoint';
+import MainPage from './pages/MainPage';
+import AdminPage from './pages/admin/AdminPage';
 
 function App() {
   return (
     <Routes>
       <Route path='/' element={<Randing />} />
+      <Route path='/mainPage' element={<MainPage />} />
       <Route path='/checkTakeout' element={<CheckTakeOut />} />
       <Route path='/main' element={<CheckTakeOut />} />
       <Route path='/recmenu' element={<RecMenu />} />
@@ -21,6 +24,7 @@ function App() {
       <Route path='/checkOrder' element={<OrderCheck />} />
       <Route path='/pay' element={<Pay />} />
       <Route path='/complete' element={<OrderComplete />} />
+      <Route path='/admin' element={<AdminPage />} />
     </Routes>
   );
 }

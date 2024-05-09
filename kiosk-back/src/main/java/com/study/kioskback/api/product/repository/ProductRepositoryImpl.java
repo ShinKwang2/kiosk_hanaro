@@ -24,6 +24,14 @@ public class ProductRepositoryImpl implements ProductRepositoryCustom {
     }
 
     @Override
+    public List<Product> findRecommend(ProductSearch productSearch) {
+        return jpaQueryFactory.selectFrom(product)
+                .orderBy(product.createdAt.desc())
+                .limit(10L)
+                .fetch();
+    }
+
+    @Override
     public List<Product> findAllByIdIn(List<Integer> productIds) {
         return jpaQueryFactory.selectFrom(product)
                 .where(product.id.in(productIds))

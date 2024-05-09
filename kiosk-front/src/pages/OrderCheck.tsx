@@ -2,6 +2,7 @@ import { useState } from 'react';
 import OrderList from '../components/OrderList';
 import Total from '../components/OrderTotal';
 import { useNavigate } from 'react-router-dom';
+import { useCartManager } from '../contexts/cart-context';
 
 function OrderCheck() {
   const [orderItems, setOrderItems] = useState([
@@ -9,6 +10,10 @@ function OrderCheck() {
     { productName: '감자 튀김', price: 2000, quantity: 1 },
     { productName: '맥 플러리', price: 1000, quantity: 1 },
   ]);
+
+  const { cart, removeProduct, addOneQuantity, deductOneQuantity, totalPrice } =
+    useCartManager();
+
   const navigate = useNavigate();
 
   function handleQuantityChange(idx: number, newQuantity: number) {
@@ -24,15 +29,15 @@ function OrderCheck() {
     setOrderItems(newProducts);
   };
 
-  const totalQuantity = orderItems.reduce(
-    (total, item) => total + item.quantity,
+  const totalQuantity = cart.reduce(
+    (total, product) => total + product.quantity,
     0
   );
 
-  const totalPrice = orderItems.reduce(
-    (total, item) => total + item.price * item.quantity,
-    0
-  );
+  // const totalPrice = orderItems.reduce(
+  //   (total, item) => total + item.price * item.quantity,
+  //   0
+  // );
 
   function handlePay() {
     navigate('/pay');
@@ -43,20 +48,11 @@ function OrderCheck() {
         주문을 확인하세요
       </h1>
       <div className='bg-white rounded-lg p-5 '>
-        {orderItems.map((item, idx) => (
-          <OrderList
-            key={item.productName}
-            productName={item.productName}
-            price={item.price}
-            quantity={item.quantity}
-            onQuantityChange={(newQuantity) =>
-              handleQuantityChange(idx, newQuantity)
-            }
-            onClickDelete={deleteProduct}
-          />
+        {cart.map((p) => (
+          <OrderList key={p.id + p.optionName} {...p} />
         ))}
         <Total
-          orderLists={orderItems}
+          orderLists={cart}
           totalQuantity={totalQuantity}
           totalPrice={totalPrice}
         />

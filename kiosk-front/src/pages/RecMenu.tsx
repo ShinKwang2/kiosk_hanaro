@@ -25,7 +25,7 @@ function RecMenu() {
   }
 
   function handlePrevious() {
-    navigate('/checkTakeout');
+    history.back();
   }
 
   function handlePointPage() {

@@ -11,6 +11,22 @@ export type ApiResponse<T> = {
   data: T;
 };
 
+export type OrderResponse = {
+  id: number;
+  totalPrice: number;
+  registeredDateTime: Date;
+  products: ProductResponse[];
+  point: number;
+};
+
+export type ProductResponse = {
+  id: number;
+  productNameKr: string;
+  productNameEn: string;
+  orderPrice: number;
+  quantity: number;
+};
+
 export type Session = {
   locale: string;
   cart: Cart;

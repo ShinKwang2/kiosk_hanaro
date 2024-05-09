@@ -29,18 +29,28 @@ public class User {
 
     @Column(name = "user_created_date")
     private LocalDateTime userJoinDate;                         // 회원가입 일자
+    @Column(name = "is_removed")
+    private Boolean isRemoved;
+    @Column(name = "deleted_at")
+    private LocalDateTime deletedAt;
 
     @Builder
-    public User(String userPhoneNumber, Integer userPoint, LocalDateTime userJoinDate) {
+    public User(String userPhoneNumber, Integer userPoint, LocalDateTime userJoinDate, Boolean isRemoved) {
         this.userPhoneNumber = userPhoneNumber;
         this.userPoint = userPoint;
         this.userJoinDate = userJoinDate;
+        this.isRemoved = isRemoved;
     }
 
     // user point 적립
     public Integer addPoint(Integer plusPoint) {
         userPoint += plusPoint;
         return userPoint;
+    }
+
+    public void delete(LocalDateTime deletedDateTime) {
+        isRemoved = true;
+        deletedAt = deletedDateTime;
     }
 
     //==연관관계 편의 메소드==//

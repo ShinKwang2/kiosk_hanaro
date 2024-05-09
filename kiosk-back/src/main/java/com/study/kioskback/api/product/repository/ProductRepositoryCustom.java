@@ -10,4 +10,6 @@ public interface ProductRepositoryCustom {
     List<Product> findAllBy(ProductSearch productSearch);
 
     List<Product> findAllByIdIn(List<Integer> productIds);
+
+    List<Product> findRecommend(ProductSearch productSearch);
 }

@@ -11,7 +11,7 @@ function CheckTakeOut() {
 
   useEffect(() => {
     if (selectedCheck !== null && selectedLanguage !== null) {
-      navigate('/recMenu');
+      navigate('/mainPage');
     }
   }, [selectedCheck, selectedLanguage, navigate]);
 

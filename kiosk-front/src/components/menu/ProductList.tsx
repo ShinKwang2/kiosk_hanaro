@@ -32,6 +32,8 @@ const ProductList = () => {
       const json = (await res.json()) as ApiResponse<ProductPreview[]>;
       setProductPreviews(!json.data ? [] : json.data);
     })();
+
+    return () => controller.abort();
   }, [selectedMenu]);
 
   return (

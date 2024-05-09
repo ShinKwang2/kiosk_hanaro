@@ -27,6 +27,10 @@ public class ProductSearch {
         return (long) (Math.max(1, page) - 1) * Math.min(size, MAX_SIZE);
     }
 
+    public long getLimit() {
+        return (long) size;
+    }
+
     public ProductType getProductType() {
         if (type == null) {
             return null;

@@ -1,14 +1,23 @@
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import logo from '../static/gif/logo.gif';
 import { useEffect, useState } from 'react';
+import { useCartManager } from '../contexts/cart-context';
 
 function OrderComplete() {
-  const orderNumber = 2224;
-  const point = 1200;
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const id = searchParams.get('id');
+  const point = searchParams.get('point');
+
+  const { resetCart } = useCartManager();
+
+  // const orderNumber = id;
+  // const point = point;
   const navigate = useNavigate();
   const [countdown, setCountdown] = useState(5);
 
   useEffect(() => {
+    resetCart();
     const timer = setInterval(() => {
       setCountdown((prevCountdown) => prevCountdown - 1);
     }, 1000);
@@ -43,7 +52,7 @@ function OrderComplete() {
         <img className='w-56 h-56 shadow-xl' src={logo} alt='logo' />
         <p className='mt-10'>
           고객님의 주문번호는
-          <span className='font-bold text-red-500'>{orderNumber}</span>
+          <span className='font-bold text-red-500'>{id}</span>
           번입니다.
         </p>
         <p className='font-bold'>감사합니다.</p>

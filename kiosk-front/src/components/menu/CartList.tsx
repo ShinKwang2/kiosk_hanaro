@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { useCartManager } from '../../contexts/cart-context';
 
 const concatName = (koreanName: string, optionName: string) => {
@@ -7,8 +8,16 @@ const concatName = (koreanName: string, optionName: string) => {
 const isEmptyArray = (arr: any[]): boolean => arr.length === 0;
 
 const CartList = () => {
-  const { cart, addOneQuantity, deductOneQuantity, removeProduct, totalPrice } =
-    useCartManager();
+  const {
+    cart,
+    addOneQuantity,
+    deductOneQuantity,
+    removeProduct,
+    totalPrice,
+    resetCart,
+  } = useCartManager();
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -47,10 +56,18 @@ const CartList = () => {
         })}
       </ul>
       <div className='bg-yellow-200 flex justify-center'>
-        <button className='bg-blue-400 rounded-xl p-4 m-3 min-w-20'>
+        <button
+          className='bg-blue-400 rounded-xl p-4 m-3 min-w-20'
+          onClick={() => {
+            navigate('/recmenu');
+          }}
+        >
           주문하기
         </button>
-        <button className='bg-red-400 rounded-xl p-4 m-3 min-w-20'>
+        <button
+          className='bg-red-400 rounded-xl p-4 m-3 min-w-20'
+          onClick={resetCart}
+        >
           비우기
         </button>
 

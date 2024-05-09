@@ -14,7 +14,9 @@ type CartContextProps = {
   removeProduct: (id: number, optionName: string) => void;
   addOneQuantity: (id: number, optionName: string) => void;
   deductOneQuantity: (id: number, optionName: string) => void;
+  resetCart: () => void;
   totalPrice: number;
+  totalQuantity: number;
 };
 
 const CartContext = createContext<CartContextProps>({
@@ -23,7 +25,9 @@ const CartContext = createContext<CartContextProps>({
   removeProduct: () => {},
   addOneQuantity: () => {},
   deductOneQuantity: () => {},
+  resetCart: () => {},
   totalPrice: 0,
+  totalQuantity: 0,
 });
 
 export const CartProvider = ({ children }: PropsWithChildren) => {
@@ -32,6 +36,10 @@ export const CartProvider = ({ children }: PropsWithChildren) => {
   const totalPrice = useMemo(
     () =>
       cart.reduce((sum, product) => sum + product.price * product.quantity, 0),
+    [cart]
+  );
+  const totalQuantity = useMemo(
+    () => cart.reduce((sum, product) => sum + product.quantity, 0),
     [cart]
   );
 
@@ -70,6 +78,9 @@ export const CartProvider = ({ children }: PropsWithChildren) => {
     }
     setCart([...cart]);
   };
+  const resetCart = () => {
+    setCart([]);
+  };
 
   return (
     <CartContext.Provider
@@ -79,7 +90,9 @@ export const CartProvider = ({ children }: PropsWithChildren) => {
         removeProduct,
         addOneQuantity,
         deductOneQuantity,
+        resetCart,
         totalPrice,
+        totalQuantity,
       }}
     >
       {children}

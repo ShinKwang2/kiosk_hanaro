@@ -1,50 +1,37 @@
+import { useCartManager } from '../contexts/cart-context';
+import { Product } from '../types/types';
+
 interface OrderListProps {
-  productName: string;
-  price: number;
-  quantity: number;
-  onQuantityChange: (newQuantity: number) => void;
-  onClickDelete: (productName: string) => void;
+  product: Product;
 }
 
-function OrderList({
-  productName,
-  price,
-  quantity,
-  onQuantityChange,
-  onClickDelete,
-}: OrderListProps) {
-  function increaceBtn() {
-    onQuantityChange(quantity + 1);
-  }
+function OrderList(props: Product) {
+  const { id, koreanName, englishName, price, quantity, optionName } = props;
 
-  function decreaceBtn() {
-    if (quantity > 1) {
-      onQuantityChange(quantity - 1);
-    }
-  }
+  const { addOneQuantity, deductOneQuantity, removeProduct } = useCartManager();
 
   return (
     <div className='flex justify-between mt-2'>
       <div className='py-2 px-4'>
-        {productName} - {price}
+        {`${koreanName} ${optionName}`} X {price}
       </div>
       <span className='ml-5 flex'>
         <button
-          onClick={decreaceBtn}
+          onClick={() => deductOneQuantity(id, optionName)}
           className='shadow-lg py-2 px-4 rounded-lg font-bold'
         >
           -
         </button>
         <p className='py-2 px-4'>수량 : {quantity}</p>
         <button
-          onClick={increaceBtn}
+          onClick={() => addOneQuantity(id, optionName)}
           className='shadow-lg py-2 px-4 rounded-lg font-bold'
         >
           +
         </button>
         <button
           className='shadow-xl py-2 px-4 ml-4 rounded-lg bg-red-600 text-white'
-          onClick={() => onClickDelete(productName)}
+          onClick={() => removeProduct(id, optionName)}
         >
           삭제
         </button>
